@@ -1,0 +1,263 @@
+.vitality {
+  margin-bottom: 60px;
+
+  .doterraRowNoSplit {
+    display: grid;
+    //grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      width: 1px;
+      height: 125px;
+      background: #000000;
+    }
+  }
+
+  &.new {
+    margin-bottom: 0;
+
+    .vitality {
+      &__rectangle {
+        display: none;
+      }
+
+      &__score {
+        background: #95B6A8;
+      }
+    }
+
+    h2 {
+      text-align: left;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      &.bold {
+        display: none;
+      }
+    }
+
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+
+    &.big {
+      font-family: 'Montserrat', serif;
+      font-weight: 400;
+      font-size: 100px;
+      line-height: 122px;
+      color: black;
+      margin-bottom: 70px;
+    }
+  }
+
+  h3 {
+    &.bold {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
+  &__inner {
+    padding-bottom: 50px;
+    position: relative;
+
+
+    &-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 100%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    background: #6D7B9B;
+    border-radius: 50%;
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FAF4ED;
+  }
+
+  &__min,
+  &__max {
+    font-family: 'Montserrat', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: black;
+    position: absolute;
+    bottom: 12px;
+  }
+
+  &__min {
+    left: 0;
+  }
+
+  &__max {
+    right: 0;
+  }
+
+  &__rectangle {
+    position: absolute;
+    height: 25px;
+    width: 44%;
+    max-width: 473px;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      height: 15px;
+      width: 1px;
+      background: black;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    bottom: 1px;
+    width: 2px;
+    // height: calc(100% + 26px);
+    background: black;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .vitality {
+    h1 {
+      &.big {
+        margin-bottom: 70px;
+        font-size: 60px;
+        line-height: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .vitality {
+    margin-bottom: 30px;
+
+    &.new {
+      margin-bottom: 0;
+
+      h1 {
+        &.big {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    h1 {
+      &.big {
+        padding: 0 !important;
+        margin: 0 0 50px 0 !important;
+        text-align: left;
+      }
+    }
+
+    h3 {
+      &.bold {
+        text-align: left;
+      }
+    }
+
+    &__inner {
+      padding-bottom: 28px;
+    }
+
+    &__score {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__min,
+    &__max {
+      bottom: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &__rectangle {
+      height: 13px;
+      bottom: 15px;
+
+      &::before {
+        bottom: -8px;
+        height: 8px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .doterraRowNoSplit {
+    &::after {
+      display: none;
+    }
+  }
+
+  .vitality {
+    h2 {
+      max-width: 230px;
+      margin-bottom: 0 !important;
+    }
+
+    h1 {
+      &.big {
+        margin: 0 0 40px 0 !important;
+      }
+    }
+  }
+}

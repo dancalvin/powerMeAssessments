@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/do-terra.iml" filepath="$PROJECT_DIR$/.idea/do-terra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../do-terra-api/.idea/do-terra-api.iml" filepath="$PROJECT_DIR$/../do-terra-api/.idea/do-terra-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../powerMe/.idea/powerMe.iml" filepath="$PROJECT_DIR$/../powerMe/.idea/powerMe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../powerMe-PMHDEV/vscore/.idea/vscore.iml" filepath="$PROJECT_DIR$/../powerMe-PMHDEV/vscore/.idea/vscore.iml" />
+    </modules>
+  </component>
+</project>

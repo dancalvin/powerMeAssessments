@@ -1,0 +1,55 @@
+.doterraRow {
+  display: grid;
+  //grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.bigNumber {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 0.5;
+  text-align: left;
+  margin-bottom: 75px;
+}
+
+.darkBlue {
+  color: #545A88;
+}
+
+.violet {
+  color: #7C5D7A;
+}
+
+.light-blue {
+  color: #A3C2C4;
+}
+
+.circleDisplay {
+  display: grid;
+  text-align: center;
+
+
+  .partOne, .partTwo, .partThree {
+    grid-area: 1 / 1;
+  }
+
+  .partThree {
+    height: 100px;
+    position: relative;
+    top: 43.5%;
+
+    span {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+  }
+
+  .svg-pi {
+    width: 400px;
+    height: 400px;
+    transform: rotate(-90deg); /* Fix the orientation */
+  }
+
+}
